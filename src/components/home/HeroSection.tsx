@@ -2,18 +2,16 @@
 // import { Button } from '@/components/ui/button';
 // import { Input } from '@/components/ui/input';
 
-
 export function HeroSection() {
   return (
     <section className="relative h-[580px] flex items-center">
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'url(src/images/image.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-
+          backgroundImage: "url(src/images/image.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
         }}
       >
         <div className="absolute inset-0 bg-black/40" />
@@ -21,11 +19,11 @@ export function HeroSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex justify-end">
-          <img src="src/images/logowht.png" alt="" className="w-[190px] "/>
+          <img src="src/images/logowht.png" alt="" className="w-[190px] " />
         </div>
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Trouvez votre maison idéale
+            Trouvez votre maison idéalee
           </h1>
           <p className="text-xl text-white/90 mb-8">
             Découvrez des milliers de maisons à louer partout en France
