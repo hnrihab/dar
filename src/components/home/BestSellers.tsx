@@ -3,13 +3,13 @@ import ProductCard from "../ui/ProductCard";
 
 const BestSellers = () => {
   return (
-    <div className="px-16 space-y-4 my-4">
+    <div className="mx-2 lg:px-16 space-y-4 my-4">
       <div className=" flex items-center justify-between flex-col lg:flex-row ">
         <div className="flex flex-col ">
           <h2 className="font-semibold text-2xl">Best Sellers</h2>
           <p className="text-xs font-semibold">Special products this month</p>
         </div>
-        <div className="border flex  justify-between px-4 rounded py-2 gap-6  ">
+        <div className="border flex  justify-between lg:px-4 px-1 rounded py-2 gap-6 ">
           <Link className="font-medium text-sm" to={"#"}>
             All
           </Link>
