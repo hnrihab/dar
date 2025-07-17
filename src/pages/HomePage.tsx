@@ -2,6 +2,7 @@
 // import { PopularHouses } from "@/components/home/PopularHouses";
 // import { Features } from "@/components/home/Features";
 // import { Testimonials } from "@/components/home/Testimonials";
+import BestSellers from "@/components/home/BestSellers";
 import Hero from "./Hero";
 import FeaturedCategories from "@/components/home/FeaturedCategories";
 
@@ -10,6 +11,7 @@ export function HomePage() {
     <>
       <Hero />
       <FeaturedCategories />
+      <BestSellers />
       {/* <HeroSection />
       <PopularHouses />
       <Features />
