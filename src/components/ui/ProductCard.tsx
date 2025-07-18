@@ -1,7 +1,12 @@
+import { item } from "@/types";
+import React from "react";
 import { FaEye, FaRegHeart, FaStar } from "react-icons/fa";
 import { LuShoppingCart } from "react-icons/lu";
 
-const ProductCard = () => {
+type ProductsCardPrpos = {
+  data: item;
+};
+const ProductCard: React.FC<ProductsCardPrpos> = ({ data }) => {
   return (
     <div className="p-4 border rounded">
       <div className="flex justify-between">
@@ -18,10 +23,10 @@ const ProductCard = () => {
         </div>
       </div>
       <div>
-        <h5 className="text-xs text-lightBlue/50 font-semibold">Apple</h5>
-        <h2 className="text-sm font-semibold text-darkBlue">
-          2022 Apple iMac with Retina 5K <br /> Display 8GB RAM, 256 SSD
-        </h2>
+        <h5 className="text-xs text-lightBlue/50 font-semibold">
+          {data.company}
+        </h5>
+        <h2 className="text-sm font-semibold text-darkBlue">{data.name}</h2>
         <div className="flex items-center mt-1">
           <FaStar className="text-[#ffb067]" />
           <FaStar className="text-[#ffb067]" />
@@ -29,24 +34,22 @@ const ProductCard = () => {
           <FaStar className="text-[#ffb067]" />
           <FaStar className="text-[#ffb067]" />
           <span className="text-xs font-semibold ml-2 text-lightBlue">
-            (65)
+            ({data.rateCount})
           </span>
         </div>
         <div className="my-2">
-          <span className="font-semibold text-darkBlue">$2856.3</span>
+          <span className="font-semibold text-darkBlue">${data.newPrice}</span>
           <span className="font-semibold text-darkBlue/50 text-xs line-through ml-2">
-            $3225.6
+            ${data.oldPrice}
           </span>
         </div>
         <button className="w-full border text-xs py-2 rounded text-darkBlue hover:text-white  hover:bg-darkBlue my-3">
           Add To Cart
         </button>
         <div className="text-darkBlue">
-          <h5 className="text-xs">27-inch (diagonal) Retina 5k display</h5>
-          <h5 className="text-xs">
-            3.1Ghz 6-core 10th-generatin Intel COre i5
-          </h5>
-          <h5 className="text-xs">AMD Radeon Pro Graphics</h5>
+          <h5 className="text-xs">{data.moreDetails[0]}</h5>
+          <h5 className="text-xs">{data.moreDetails[1]}</h5>
+          <h5 className="text-xs">{data.moreDetails[2]}</h5>
         </div>
       </div>
     </div>

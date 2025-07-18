@@ -20,3 +20,13 @@ export interface SearchFilters {
   bedrooms?: number;
   bathrooms?: number;
 }
+
+export type item = {
+  company: string;
+  name: string;
+  detail: string;
+  rateCount: number;
+  newPrice: number;
+  oldPrice: number;
+  moreDetails: string[];
+};
