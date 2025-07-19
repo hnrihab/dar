@@ -7,6 +7,7 @@ import Hero from "./Hero";
 import FeaturedCategories from "@/components/home/FeaturedCategories";
 import Subscribe from "@/components/layout/Subscribe";
 import Services from "@/components/home/Services";
+import LatestNew from "@/components/home/LatestNews";
 
 export function HomePage() {
   return (
@@ -14,8 +15,10 @@ export function HomePage() {
       <Hero />
       <FeaturedCategories />
       <BestSellers />
+      <LatestNew />
       <Services />
       <Subscribe />
+
       {/* <HeroSection />
       <PopularHouses />
       <Features />
