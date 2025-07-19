@@ -8,6 +8,7 @@ import FeaturedCategories from "@/components/home/FeaturedCategories";
 import Subscribe from "@/components/layout/Subscribe";
 import Services from "@/components/home/Services";
 import LatestNew from "@/components/home/LatestNews";
+import Articals from "@/components/home/Articls";
 
 export function HomePage() {
   return (
@@ -15,6 +16,7 @@ export function HomePage() {
       <Hero />
       <FeaturedCategories />
       <BestSellers />
+      <Articals />
       <LatestNew />
       <Services />
       <Subscribe />

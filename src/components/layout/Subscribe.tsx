@@ -1,7 +1,7 @@
 const Subscribe = () => {
   return (
-    <div className=" lg:mx-16 py-4">
-      <div className="p-2 flex flex-col lg:flex-row lg:justify-between lg:text-start items-center text-center gap-y-2 text-white py-2 bg-[#0e224c]">
+    <div className="my-20">
+      <div className="p-2 lg:px-16 lg:py-10 flex flex-col lg:flex-row lg:justify-between lg:text-start items-center text-center gap-y-2 text-white py-2 bg-[#0e224c]">
         <div className="">
           <h2 className="font-bold">Subscribe & Get 10% Discount</h2>
           <p className="text-xs font-semibold">

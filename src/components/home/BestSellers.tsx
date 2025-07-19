@@ -6,7 +6,7 @@ const BestSellers = () => {
   const [products, setProducts] = useState(bestSoldProducts);
 
   return (
-    <div className="mx-2 lg:px-16 space-y-4 my-4">
+    <div className="px-4 lg:px-16 space-y-4 my-4">
       <div className=" flex items-center justify-between flex-col lg:flex-row ">
         <div className="flex flex-col ">
           <h2 className="font-semibold text-2xl">Best Sellers</h2>

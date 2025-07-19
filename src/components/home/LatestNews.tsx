@@ -44,7 +44,7 @@ const LatestNew = () => {
         {visibleNew.map((item) => (
           <div key={item.id} className="flex flex-col ">
             <img className="rounded" src={item.image} alt="" />
-            <h5 className="text-xs my-2 bg-gray-200 w-fit font-semibold px-2  rounded">
+            <h5 className="text-xs my-2 bg-gray-200 w-fit font-semibold px-3  rounded   ring-1 ring-blue-700">
               #{item.tag}
             </h5>
             <h2 className="font-semibold text-sm">{item.title}</h2>
