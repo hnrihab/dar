@@ -14,7 +14,7 @@ const BestSellers = () => {
         </div>
         <div className="border flex  justify-between lg:px-4 px-1 rounded py-2 gap-6 ">
           <button
-            className="font-medium text-sm text-gray-600 "
+            className="font-medium text-sm text-gray-600 px-2 py-1"
             onClick={() => setProducts(bestSoldProducts)}
           >
             BEST SELLER
