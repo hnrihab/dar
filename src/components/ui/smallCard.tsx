@@ -1,34 +1,46 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
-const SmallCard = () => {
+type Subcategory = {
+  label: string;
+  link: string;
+};
+
+type SmallCardProps = {
+  title: string;
+  imageUrl: string;
+  viewAllLink: string;
+  subcategories: Subcategory[];
+};
+
+const SmallCard: React.FC<SmallCardProps> = ({
+  title,
+  imageUrl,
+  viewAllLink,
+  subcategories,
+}) => {
   return (
-    <div className="border  flex w-full p-5 rounded">
-      <div className=" flex flex-col gap-y-4 items-center">
-        <img className="" src="https://placehold.co/100" alt="" />
-        <Link
-          to={"#"}
-          className="rounded bg-gray-300 w-fit px-3  text-xs text-center py-1"
-        >
-          View All
-        </Link>
+    <div className="p-6 border rounded shadow-sm">
+      <div className="flex items-center gap-2">
+        <img src={imageUrl} alt={title} className="" />
+        <div>
+          <h3 className="font-semibold text-lg">{title}</h3>
+          <Link to={viewAllLink} className="text-blue-500 text-sm underline">
+            Voir tout
+          </Link>
+        </div>
       </div>
-      <div className="ml-4">
-        <h2 className="text-sm font-semibold mb-3">Smart Phone</h2>
-        <ul className="flex flex-col gap-y-1 text-xs ">
-          <Link className="font-normal text-gray-800" to={"#"}>
-            Phone Accessories
-          </Link>
-          <Link className="font-normal text-gray-800" to={"#"}>
-            Phone Cases
-          </Link>
-          <Link className="font-normal text-gray-800" to={"#"}>
-            Postpaid
-          </Link>
-          <Link className="font-normal text-gray-800" to={"#"}>
-            Refurbished Phones
-          </Link>
-        </ul>
-      </div>
+
+      {/* 💡 Grid à deux colonnes pour les sous-catégories */}
+      <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+        {subcategories.map((sub, index) => (
+          <li key={index}>
+            <Link to={sub.link} className="text-gray-700 hover:underline">
+              {sub.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
