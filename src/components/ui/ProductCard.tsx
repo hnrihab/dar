@@ -16,27 +16,14 @@ const ProductCard: React.FC<ProductsCardPrpos> = ({ data }) => {
           </p>
           <img className="rounded" src="https://placehold.co/170x150" alt="" />
         </div>
-        <div className="space-y-2">
-          <FaRegHeart className="border text-2xl rounded text-darkBlue p-1" />
-          <LuShoppingCart className="border text-2xl rounded text-darkBlue p-1" />
-          <FaEye className="border text-2xl rounded text-darkBlue p-1" />
-        </div>
+       
       </div>
       <div>
         <h5 className="text-xs text-lightBlue/50 font-semibold">
           {data.company}
         </h5>
         <h2 className="text-sm font-semibold text-darkBlue">{data.name}</h2>
-        <div className="flex items-center mt-1">
-          <FaStar className="text-[#ffb067]" />
-          <FaStar className="text-[#ffb067]" />
-          <FaStar className="text-[#ffb067]" />
-          <FaStar className="text-[#ffb067]" />
-          <FaStar className="text-[#ffb067]" />
-          <span className="text-xs font-semibold ml-2 text-lightBlue">
-            ({data.rateCount})
-          </span>
-        </div>
+       
         <div className="my-2">
           <span className="font-semibold text-darkBlue">${data.newPrice}</span>
           <span className="font-semibold text-darkBlue/50 text-xs line-through ml-2">

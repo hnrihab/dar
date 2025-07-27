@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 
 export function Footer() {
   return (
-    <footer className=" border-t" style={{ backgroundColor: 'rgba(128, 58, 42, 0.8)' }}>
+    <footer className=" bg-white border-t" >
       <div className="container mx-auto px-4 py-8">
+        
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
