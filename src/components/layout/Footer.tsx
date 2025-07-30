@@ -10,8 +10,8 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               {/* <Home className="h-6 w-6 text-primary" /> */}
-              <img src="src/images/logoblck.png" alt="error" className="w-[60px] object-contain" />
-              <span className="text-xl font-semibold">MaisonLoc</span>
+              <img src="src/images/logov.png" alt="error" className="w-[60px] object-contain" />
+              <span className="text-xl font-semibold">Violet Vision</span>
             </div>
             <p className="text-sm text-muted-foreground">
               Trouvez la maison de vos rêves parmi notre sélection de locations.

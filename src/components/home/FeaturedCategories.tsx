@@ -31,7 +31,7 @@ const FeaturedCategories = () => {
           <SmallCard
         title=" Cartes"
         imageUrl="https://placehold.co/140?text=Print"
-        viewAllLink="/categories/cartes"
+        viewAllLink="/cartes"
         subcategories={[
           { label: "Cartes de Visite", link: "/categories/cartes/viste" },
           { label: " Cartes d'invitation", link: "/categories/cartes/invitation" },
