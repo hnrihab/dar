@@ -1,6 +1,21 @@
 import { item } from "@/types";
 import ProductCard from "../ui/ProductCard";
 import { useState } from "react";
+import { motion } from "framer-motion";
+
+const fadeInVariant = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.1 * i,
+    },
+  }),
+};
 
 const BestSellers = () => {
   const [products, setProducts] = useState(bestSoldProducts);
@@ -35,7 +50,17 @@ const BestSellers = () => {
       </div>
       <div className="border-t grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-2 pt-4">
         {products.map((item, i) => (
-          <ProductCard key={i} data={item} />
+          <motion.div
+            variants={fadeInVariant}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            custom={i}
+          >
+            <ProductCard key={i} data={item} />
+          </motion.div>
         ))}
       </div>
     </div>

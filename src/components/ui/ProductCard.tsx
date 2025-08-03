@@ -4,6 +4,7 @@ import React from "react";
 type ProductsCardPrpos = {
   data: item;
 };
+
 const ProductCard: React.FC<ProductsCardPrpos> = ({ data }) => {
   return (
     <div className="p-2 border rounded h-full ">

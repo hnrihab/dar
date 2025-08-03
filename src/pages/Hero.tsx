@@ -31,16 +31,16 @@ const Hero = () => {
         onMouseEnter={() => setAutoPlay(false)}
         onMouseLeave={() => setAutoPlay(true)}
       >
-        <div className="flex flex-col  justify-between p-10">
+        <div className="flex flex-col  justify-around p-10">
           <h1 className="font-bold transition-all text-3xl z-20 lg:w-[70%]">
             Votre Imprimerie en Ligne pour Tous Vos Besoins Publicitaires
           </h1>
           <p className=" lg:w-[50%] z-20 text-sm font-bold">
             Votre partenaire d’impression pour tous vos supports de
-            communication. <br /> Commandez en ligne vos cartes de visite,
-            flyers, affiches, roll-ups, bâches vinyle et bien plus. <br />{" "}
-            Qualité professionnelle, finitions sur mesure et livraison rapide
-            partout au Maroc.
+            communication. Commandez en ligne vos cartes de visite, flyers,
+            affiches, roll-ups, bâches vinyle et bien plus. Qualité
+            professionnelle, finitions sur mesure et livraison rapide partout au
+            Maroc.
           </p>
           <div className="mb-5 space-x-2 flex z-20">
             <Link
