@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 
 const Articals = () => {
   return (
-    <div className=" grid grid-cols-1 lg:grid-cols-4  gap-4 lg:mx-16 items-center my-10">
+    <div className=" grid grid-cols-1 lg:grid-cols-4  gap-4 lg:mx-16 items-center my-10 cursor-pointer">
       {/** the first one */}
+
       <div className=" flex justify-between  flex-col border  relative h-full">
         <div className="z-10 p-10">
           <h2 className="text-2xl font-semibold">Lorem ipsum </h2>
