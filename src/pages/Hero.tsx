@@ -27,7 +27,7 @@ const Hero = () => {
   const product = products[number];
 
   return (
-    <div className="lg:flex lg:justify-between lg:px-16 gap-6  my-10">
+    <div className="lg:flex py-14 lg:justify-between lg:px-16 gap-6  my-10">
       <div className="lg:w-[70%] border relative flex p-10 overflow-hidden  bg-[#d4f7ff] rounded">
         <div className="flex flex-col  justify-between text-[#0e224c]">
           <h5 className="text-xs font-thin">HOT RIGHT NOW</h5>

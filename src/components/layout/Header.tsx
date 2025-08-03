@@ -1,53 +1,60 @@
 import { useState } from 'react';
 import { User, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-const [searchTerm, setSearchTerm] = useState('');
-const navigate = useNavigate();
-
-const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  if (searchTerm.trim()) {
-    navigate(`/search?q=${encodeURIComponent(searchTerm.trim())}`);
-  }
+//const navigate = useNavigate();
+const user = {
+  firstName: "Rihab",
+  lastName: "H.",
 };
+
 
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b">
+         {/* 🔵 Barre supérieure */}
+      <div className="  py-4 bg-gray-100 border-y-black text-sm text-gray-700 px-4 py-2 flex justify-between items-center">
+        <div className="flex gap-4 px-56">
+          <Link to="/apropos" className="hover:underline">À propos</Link>
+          <Link to="/services" className="hover:underline">Services</Link>
+        </div>
+        <div>
+          Bonjour, <span className="font-semibold">{user.firstName} {user.lastName}</span>
+        </div>
+      </div>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo + Barre de recherche */}
+   
+
+
           <div className="flex items-center gap-4">
             <img src="src/images/logov.png" alt="error" className="w-[60px] object-contain" />
-
-            {/* Barre de recherche */}
-            <form
-  onSubmit={handleSearch}
-  className="hidden md:flex items-center gap-2 border px-2 rounded-md"
->
-  <input
-    type="text"
-    value={searchTerm}
-    onChange={(e) => setSearchTerm(e.target.value)}
-    placeholder="Rechercher..."
-    className="outline-none px-2 py-1 text-sm w-[180px] bg-transparent"
-  />
-  <button
-    type="submit"
-    className="text-sm px-2 text-blue-500 hover:text-blue-700"
-  >
-   Search
-  </button>
-</form>
-
           </div>
 
+
+ {/* Bloc Catégories + Recherche */}
+<div className="hidden md:flex  gap-2 w-4/12 max-w-xl mx-auto border border-gray-300 rounded-md   overflow-hidden">
+  {/* Menu déroulant des catégories */}
+  <select className="h-10 bg-gray-100 p-1 text-sm border-r outline-none">
+    <option>Toutes Catégories</option>
+    <option>Cartes</option>
+    <option>Goodies</option>
+    <option>Textile</option>
+    <option>Impression</option>
+  </select>
+
+  {/* Champ de recherche */}
+  <input
+    type="text"
+    placeholder="Rechercher Produit"
+    className="h-10 flex-1 px-4  bg-gray-100 text-sm text-gray-800 outline-none"
+  />
+</div>
           {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-6 p-10">
             <Link to="/" className="text-sm text-muted-foreground hover:text-primary">
               Accueil
             </Link>
@@ -60,10 +67,15 @@ const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
           </nav>
 
           {/* Icône utilisateur */}
-          <div className="hidden md:flex items-center gap-4">
-            <Link to="/login" className="text-sm text-muted-foreground hover:text-primary">
-              <Button className="rounded-full">
-                <User className="h-5 w-5" />
+          <div className="hidden md:flex items-center gap-2">
+            <Link to="/login" className="text-sm text-muted-foreground hover:text-primary ">
+              <Button className="rounded-md bg-white text-black hover:bg-violet-400 hover:text-white">
+               <h3>S'inscrire</h3>
+              </Button>
+            </Link>
+             <Link to="/login" className="text-sm text-muted-foreground   hover:text-primary ">
+              <Button className="rounded-md bg-violet-900 hover:bg-neutral-300 hover:text-zinc-900">
+               <h3>Se connecter</h3>
               </Button>
             </Link>
           </div>
