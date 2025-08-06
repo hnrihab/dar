@@ -10,15 +10,17 @@ import LeftNav from "@/components/layout/LeftNav";
 export function HomePage() {
   return (
     <>
-      <div className="flex">
+      <div className="flex border ">
         <LeftNav />
         <Hero />
       </div>
-      <FeaturedCategories />
-      <BestSellers />
-      <Articals />
-      <LatestNew />
-      <Services />
+      <div className=" px-4 lg:mx-12 border">
+        <FeaturedCategories />
+        <BestSellers />
+        <Articals />
+        <LatestNew />
+        <Services />
+      </div>
     </>
   );
 }

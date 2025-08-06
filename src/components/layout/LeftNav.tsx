@@ -1,7 +1,15 @@
 import { PiCirclesFourBold } from "react-icons/pi";
 import { BsCreditCard2Front } from "react-icons/bs";
 import { GiOpenBook } from "react-icons/gi";
-import { FaIdCard } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaIdCard,
+  FaInstagram,
+  FaLinkedin,
+  FaTiktok,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa";
 import { BsNewspaper } from "react-icons/bs";
 import { IoShirt } from "react-icons/io5";
 import { FaPrint } from "react-icons/fa";
@@ -10,11 +18,11 @@ import { Link } from "react-router-dom";
 
 const LeftNav = () => {
   return (
-    <div className="w-fit border p-2">
-      <div className="mb-3 flex items-center justify-center ">
+    <div className="w-fit border  ">
+      <div className="mb-3 flex items-center justify-center  ">
         <PiCirclesFourBold size={24} />
       </div>
-      <div className="flex flex-col gap-y-1">
+      <div className="flex flex-col gap-y-1 p-2 ">
         {icons.map((item) => (
           <div className="group flex relative items-center " key={item.id}>
             <div className="border p-2 rounded-full  text-xs">{item.icon}</div>
@@ -33,7 +41,14 @@ const LeftNav = () => {
           </div>
         ))}
       </div>
-      <div></div>
+      <div className="flex flex-col justify-around items-center gap-6 pt-10 mt-20 border-t  ">
+        <FaFacebook />
+        <FaLinkedin />
+        <FaInstagram />
+        <FaWhatsapp />
+        <FaYoutube />
+        <FaTiktok />
+      </div>
     </div>
   );
 };

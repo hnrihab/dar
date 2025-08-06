@@ -22,13 +22,11 @@ export interface SearchFilters {
 }
 
 export type item = {
-name: string;
   company: string;
+  name: string;
   detail: string;
-  imageUrl: string;
-  link: string;
   rateCount: number;
-  newPrice: string;
-  oldPrice: string;
+  newPrice: number;
+  oldPrice: number;
   moreDetails: string[];
 };

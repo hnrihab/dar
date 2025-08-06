@@ -1,7 +1,7 @@
 const Subscribe = () => {
   return (
     <div className="">
-      <div className="py-10 lg:px-16 lg:py-16 flex flex-col lg:flex-row  lg:text-start items-center text-center gap-y-2 text-white  bg-blue-800">
+      <div className="py-10 lg:p-28 lg:py-16 flex flex-col lg:flex-row  lg:text-start items-center text-center gap-y-2 text-white  bg-blue-800">
         <div className="">
           <h2 className="font-bold">
             Inscrivez-vous et bénéficiez de 10% réduction

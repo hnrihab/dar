@@ -6,7 +6,7 @@ import FadeIn from "../motion/FadeIn";
 
 export function Footer() {
   return (
-    <footer className=" bg-white p-4 md:p-16 ">
+    <footer className=" bg-white p-4 md:px-28 ">
       <FadeIn i={1}>
         <div className="bg-blue-950 p-2 rounded-lg mb-10 lg:flex ">
           <div className=" ">

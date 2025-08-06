@@ -21,13 +21,15 @@ const SmallCard: React.FC<SmallCardProps> = ({
   subcategories,
 }) => {
   return (
-    <div className="flex gap-3 rounded h-full">
-      <div className="flex flex-col items-center gap-2 border rounded">
-        <img src={imageUrl} alt={title} className="w-[60%] m-auto" />
-
+    <div className="flex  rounded h-full   ">
+      <div className="flex flex-col items-center justify-between ">
+        <div className="border  h-full flex items-center justify-center">
+          <img src={imageUrl} alt={title} className="w-[70%]  h-full" />
+        </div>
         <Link
           to={viewAllLink}
           className="text-white px-3 rounded text-xs py-1   bg-violet-700 translate-y-3 "
+
         >
           Voir tout
         </Link>
@@ -35,7 +37,7 @@ const SmallCard: React.FC<SmallCardProps> = ({
 
       {/* 💡 Grid à deux colonnes pour les sous-catégories */}
       <ul className="">
-        <h3 className="font-semibold text-lg">{title}</h3>
+        <h3 className="font-semibold text-sm">{title}</h3>
         {subcategories.map((sub, index) => (
           <li key={index}>
             <Link to={sub.link} className="text-black text-xs flex  gap-1 ">

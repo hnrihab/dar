@@ -1,9 +1,8 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Eye, EyeOff } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Eye, EyeOff } from "lucide-react";
+
+import { Label } from "@/components/ui/label";
 import {
   Card,
   CardContent,
@@ -11,7 +10,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+} from "@/components/ui/card";
 
 export function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -28,7 +27,7 @@ export function LoginPage() {
         <CardContent className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
-            <Input
+            <input
               id="email"
               type="email"
               placeholder="exemple@email.com"
@@ -38,15 +37,13 @@ export function LoginPage() {
           <div className="space-y-2">
             <Label htmlFor="password">Mot de passe</Label>
             <div className="relative">
-              <Input
+              <input
                 id="password"
-                type={showPassword ? 'text' : 'password'}
+                type={showPassword ? "text" : "password"}
                 required
               />
-              <Button
+              <button
                 type="button"
-                variant="ghost"
-                size="icon"
                 className="absolute right-0 top-0 h-full px-3 hover:bg-transparent"
                 onClick={() => setShowPassword(!showPassword)}
               >
@@ -55,12 +52,12 @@ export function LoginPage() {
                 ) : (
                   <Eye className="h-4 w-4 text-muted-foreground" />
                 )}
-              </Button>
+              </button>
             </div>
           </div>
         </CardContent>
         <CardFooter className="flex flex-col space-y-4">
-          <Button className="w-full">Se connecter</Button>
+          <button className="w-full">Se connecter</button>
           <div className="text-sm text-center space-y-2">
             <Link
               to="/forgot-password"
@@ -69,7 +66,7 @@ export function LoginPage() {
               Mot de passe oublié ?
             </Link>
             <span className="text-muted-foreground">
-              Pas encore de compte ?{' '}
+              Pas encore de compte ?{" "}
               <Link to="/register" className="text-primary hover:underline">
                 S'inscrire
               </Link>

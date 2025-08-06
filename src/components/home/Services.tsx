@@ -2,7 +2,7 @@ import FadeIn from "../motion/FadeIn";
 
 const Services = () => {
   return (
-    <div className="mx-1 lg:mx-16 my-16  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 px-2">
+    <div className="my-16  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 ">
       {services.map((service, index) => (
         <FadeIn i={index}>
           <div
