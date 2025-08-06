@@ -25,13 +25,13 @@ const Hero = () => {
   };
 
   return (
-    <div className="lg:flex lg:justify-between lg:p-5 gap-6 ">
+    <div className="lg:flex lg:justify-between lg:p-16 gap-6 border">
       <div
         className="lg:w-[70%] border relative flex  overflow-hidden  bg-[#d4f7ff] rounded cursor-pointer"
         onMouseEnter={() => setAutoPlay(false)}
         onMouseLeave={() => setAutoPlay(true)}
       >
-        <div className="flex flex-col  justify-around p-10">
+        <div className="flex flex-col  justify-around py-16 px-16">
           <h1 className="font-bold transition-all text-3xl z-20 lg:w-[70%]">
             Votre Imprimerie en Ligne pour Tous Vos Besoins Publicitaires
           </h1>
@@ -84,8 +84,8 @@ const Hero = () => {
           />
         </div>
       </div>
-      <div className=" flex gap-2 justify-between  flex-col  my-5 lg:my-0  lg:mx-0 ">
-        <div className="bg-red-50 rounded overflow-hidden lg:gap-2  w-full relative lg:p-4 flex  justify-center border-[1px]">
+      <div className=" flex gap-6 justify-between  flex-col  my-5 lg:my-0  lg:mx-0 ">
+        <div className="bg-red-50 rounded overflow-hidden lg:gap-2  w-full relative py-4 lg:p-8 flex  justify-center border-[1px]">
           <div className="flex flex-col gap-y-2 items-start justify-around z-20">
             <h2 className=" text-2xl lg:w-[50%] font-bold">
               Offer special Flayer
@@ -104,7 +104,7 @@ const Hero = () => {
             alt=""
           />
         </div>
-        <div className="bg-red-50 rounded overflow-hidden lg:gap-2  w-full relative lg:p-4 flex  justify-center border-[1px]">
+        <div className="bg-red-50 rounded overflow-hidden lg:gap-5  w-full relative py-4 lg:p-8 flex  justify-center border-[1px]">
           <div className="flex flex-col gap-y-2 items-start justify-around z-20">
             <h2 className=" text-2xl lg:w-[50%] font-bold">
               Cartes Visite Premium

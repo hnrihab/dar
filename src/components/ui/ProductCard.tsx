@@ -22,7 +22,7 @@ const ProductCard: React.FC<ProductsCardPrpos> = ({ data }) => {
       </div>
       <div className="mt-3   flex flex-col h-[52%] justify-between ">
         <h2 className="text-lg font-semibold line-clamp-1 ">{data.name}</h2>
-        <p className="text-xs   line-clamp-2 indent-4  ">
+        <p className="text-xs   line-clamp-2 ">
           Lorem ipsum dolor sit amet adipi sicing elit. Beatae quisquam vel,
           vitae odit aspernatur, nostrum quaerat atque, deserunt explicabo
           perspiciatis blanditiis ipsam minus quas magni suscipit accusamus sed

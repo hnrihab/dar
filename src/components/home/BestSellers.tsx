@@ -34,7 +34,7 @@ const BestSellers = () => {
           </button>
         </div>
       </div>
-      <div className="border-t grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-2 pt-4">
+      <div className="border-t grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pt-4">
         {products.map((item, i) => (
           <FadeIn i={i}>
             <ProductCard key={i} data={item} />
@@ -46,19 +46,6 @@ const BestSellers = () => {
 };
 
 const bestSoldProducts: item[] = [
-  {
-    company: "Apple",
-    name: "2024 MacBook Air (M2 Chip)",
-    detail: "13.6″ Retina Display, 8GB RAM, 256GB SSD",
-    rateCount: 450,
-    newPrice: 999.0,
-    oldPrice: 1099.0,
-    moreDetails: [
-      "M2 chip with 8-core CPU, 10-core GPU",
-      "Up to 18 hours battery life",
-      "MagSafe charging, Touch ID",
-    ],
-  },
   {
     company: "Samsung",
     name: "Galaxy S24 Ultra",
