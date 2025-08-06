@@ -31,7 +31,7 @@ const Hero = () => {
         onMouseEnter={() => setAutoPlay(false)}
         onMouseLeave={() => setAutoPlay(true)}
       >
-        <div className="flex flex-col  justify-around py-16 px-16">
+        <div className="flex flex-col  justify-around  px-16">
           <h1 className="font-bold transition-all text-3xl z-20 lg:w-[70%]">
             Votre Imprimerie en Ligne pour Tous Vos Besoins Publicitaires
           </h1>
