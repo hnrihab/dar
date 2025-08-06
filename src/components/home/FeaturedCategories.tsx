@@ -1,9 +1,10 @@
+import FadeIn from "../motion/FadeIn";
 import SmallCard from "../ui/smallCard";
 
 const FeaturedCategories = () => {
   return (
     <div className="my-5">
-      <div className="lg:px-16 flex items-center justify-between flex-col lg:flex-row ">
+      <div className="lg:px-16 flex items-center justify-between flex-col lg:flex-row mb-8">
         <div className="flex flex-col ">
           <h2 className="font-semibold text-2xl">Featured Categories</h2>
           <p className="text-xs font-semibold">
@@ -11,16 +12,18 @@ const FeaturedCategories = () => {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-x-4 px-10">
         {cardsData.map((item, i) => (
-          <div key={i}>
-            <SmallCard
-              title={item.title}
-              imageUrl={item.imageUrl}
-              viewAllLink={item.viewAllLink}
-              subcategories={item.subcategories}
-            />
-          </div>
+          <FadeIn i={i}>
+            <div key={i}>
+              <SmallCard
+                title={item.title}
+                imageUrl={item.imageUrl}
+                viewAllLink={item.viewAllLink}
+                subcategories={item.subcategories}
+              />
+            </div>
+          </FadeIn>
         ))}
       </div>
     </div>
