@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { LuCircleUserRound } from "react-icons/lu";
 import { MdOutlineShoppingCart } from "react-icons/md";
@@ -9,8 +8,8 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0  z-50 bg-white/80 backdrop-blur-md px-12 ">
-      <div className="  border ">
+    <header className="fixed top-0 left-0 right-0  z-50 bg-white/80 backdrop-blur-md lg:px-28 border">
+      <div className="     mx-auto">
         <div className="flex items-center justify-between h-16">
           {/* Logo + Barre de recherche */}
           <div className="flex items-center ">
@@ -80,7 +79,7 @@ export function Header() {
               Connexion
             </button>
           </div>
-          <div className="lg:flex text-2xl hidden space-x-2 items-center justify-center">
+          <div className=" lg:flex text-2xl hidden space-x-2 items-center justify-center">
             <div className="relative ">
               <h5 className="text-xs absolute -right-1 -top-1 bg-blue-700 w-4 h-4 text-center text-white rounded-full ">
                 3
@@ -90,7 +89,7 @@ export function Header() {
             <LuCircleUserRound />
           </div>
           {/* Bouton burger mobile */}
-          <Button
+          <button
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -99,7 +98,7 @@ export function Header() {
             ) : (
               <Menu className="h-5 w-5" />
             )}
-          </Button>
+          </button>
         </div>
       </div>
 
@@ -116,7 +115,7 @@ export function Header() {
             <a href="#" className="text-sm font-medium hover:text-primary">
               À propos
             </a>
-            <Button className="w-full">Se connecter</Button>
+            <button className="w-full">Se connecter</button>
           </nav>
         </div>
       )}

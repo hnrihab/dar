@@ -23,8 +23,8 @@ const LatestNew = () => {
   const visibleNew = news.slice(n, n + 4);
   console.log(visibleNew);
   return (
-    <div className="lg:px-16 p-2 my-20">
-      <div className="pb-2 flex items-center justify-between border-b mb-4">
+    <div className=" p-2 my-20">
+      <div className=" flex items-center justify-between border-b mb-4">
         <div>
           <h2 className=" text-lg font-semibold">Latest News & Events</h2>
           <h5 className="text-sm">From our blog, Forum</h5>

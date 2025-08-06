@@ -21,7 +21,7 @@ const SmallCard: React.FC<SmallCardProps> = ({
   subcategories,
 }) => {
   return (
-    <div className="flex  rounded h-full  ">
+    <div className="flex  rounded h-full   ">
       <div className="flex flex-col items-center justify-between ">
         <div className="border  h-full flex items-center justify-center">
           <img src={imageUrl} alt={title} className="w-[70%]  h-full" />

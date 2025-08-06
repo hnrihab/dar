@@ -25,7 +25,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="lg:flex lg:justify-between lg:p-16 gap-6 border">
+    <div className="lg:flex lg:justify-between  gap-6   lg:m-16">
       <div
         className="lg:w-[70%] border relative flex  overflow-hidden  bg-[#d4f7ff] rounded cursor-pointer"
         onMouseEnter={() => setAutoPlay(false)}

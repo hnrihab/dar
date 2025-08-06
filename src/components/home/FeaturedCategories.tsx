@@ -3,8 +3,8 @@ import SmallCard from "../ui/smallCard";
 
 const FeaturedCategories = () => {
   return (
-    <div className="my-5 mx-4 lg:px-16">
-      <div className="lg:px-16 flex items-center justify-between flex-col lg:flex-row mb-8">
+    <div className="">
+      <div className="flex items-center justify-between flex-col lg:flex-row mb-8">
         <div className="flex flex-col ">
           <h2 className="font-semibold text-2xl">Featured Categories</h2>
           <p className="text-xs font-semibold">
@@ -12,7 +12,7 @@ const FeaturedCategories = () => {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 gap-y-4 mx-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 gap-y-4 ">
         {cardsData.map((item, i) => (
           <FadeIn i={i}>
             <div className="h-full" key={i}>

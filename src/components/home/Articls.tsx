@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Articals = () => {
   return (
-    <div className=" grid grid-cols-1 lg:grid-cols-4  gap-4 lg:mx-16 items-center my-10 cursor-pointer">
+    <div className=" grid grid-cols-1 lg:grid-cols-4  gap-4  items-center my-10 cursor-pointer">
       {/** the first one */}
 
       <div className=" flex justify-between  flex-col border  relative h-full">
