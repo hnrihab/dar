@@ -1,61 +1,53 @@
-// src/pages/Cartes.jsx
-import { Link } from "react-router-dom";
+// pages/carte.tsx
+import React from "react";
+import ProductCard from "C:/Users/pc/Desktop/clone/dar/src/components/ui/ProductCard.tsx"; // adapte ce chemin
+import { item } from "@/types"; // adapte le chemin selon où tu as mis le type
+import FadeIn from "C:/Users/pc/Desktop/clone/dar/src/components/motion/FadeIn.tsx"; // optionnel, si tu veux l'animation
 
-const cartes = [
+// Tes produits simulés (à remplacer plus tard par des données backend si besoin)
+const bestSoldProducts: item[] = [
   {
-    title: "Carte de Visite",
-    imageUrl: "https://placehold.co/200x120?text=Visite",
-    link: "/produits/cartes/visite",
+    name: "Carte de visite Premium",
+    company: "PrintXpress",
+    detail: "Papier glacé de haute qualité, recto verso",
+    imageUrl: "https://placehold.co/200x150?text=Carte+1",
+    link: "/produit/carte-premium",
+    rateCount: 34,
+    newPrice: "12.99",
+    oldPrice: "16.99",
+    moreDetails: [
+      "Livraison 48h",
+      "Impression haute résolution",
+      "Support client 24/7",
+    ],
   },
   {
-    title: "Carte d'invitation",
-    imageUrl: "https://placehold.co/200x120?text=Invitation",
-    link: "/produits/cartes/invitation",
+    name: "Carte Pro Design",
+    company: "DesignPrint",
+    detail: "Design moderne avec coins arrondis",
+    imageUrl: "https://placehold.co/200x150?text=Carte+2",
+    link: "/produit/carte-pro-design",
+    rateCount: 18,
+    newPrice: "9.99",
+    oldPrice: "14.99",
+    moreDetails: ["Finition matte", "Design personnalisé", "Écologique"],
   },
-  {
-    title: "Carte postale",
-    imageUrl: "https://placehold.co/200x120?text=Postale",
-    link: "/produits/cartes/postale",
-  },
-  {
-    title: "Carte de Remerciement",
-    imageUrl: "https://placehold.co/200x120?text=Remerciement",
-    link: "/produits/cartes/remerciement",
-  },
-  {
-    title: "Carte de Vœux",
-    imageUrl: "https://placehold.co/200x120?text=Voeux",
-    link: "/produits/cartes/voeux",
-  },
-  {
-    title: "Carte de Fidélité",
-    imageUrl: "https://placehold.co/200x120?text=Fidélité",
-    link: "/produits/cartes/fidelite",
-  },
+  // Tu peux ajouter autant de produits que tu veux ici
 ];
 
-export default function Cartes() {
+const CartePage: React.FC = () => {
   return (
     <div className="p-6">
-      <h1 className="text-3xl font-bold mb-6 text-center">Tous les types de cartes</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {cartes.map((carte, index) => (
-          <Link
-            key={index}
-            to={carte.link}
-            className="block bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition"
-          >
-            <img
-              src={carte.imageUrl}
-              alt={carte.title}
-              className="w-full h-40 object-cover"
-            />
-            <div className="p-4">
-              <h2 className="text-xl font-semibold">{carte.title}</h2>
-            </div>
-          </Link>
+      <h1 className="text-2xl font-bold mb-6">Nos Cartes</h1>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {bestSoldProducts.map((item, i) => (
+          <FadeIn key={i} i={i}>
+            <ProductCard data={item} />
+          </FadeIn>
         ))}
       </div>
     </div>
   );
-}
+};
+
+export default CartePage;

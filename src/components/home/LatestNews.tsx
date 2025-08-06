@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import FadeIn from "../motion/FadeIn";
 
 const LatestNew = () => {
   const [n, setN] = useState(0);
@@ -41,18 +42,20 @@ const LatestNew = () => {
       </div>
 
       <div className="grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4">
-        {visibleNew.map((item) => (
-          <div key={item.id} className="flex flex-col ">
-            <img className="rounded" src={item.image} alt="" />
-            <h5 className="text-xs my-2 bg-gray-200 w-fit font-semibold px-3  rounded   ring-1 ring-blue-700">
-              #{item.tag}
-            </h5>
-            <h2 className="font-semibold text-sm">{item.title}</h2>
-            <div className="flex justify-between text-xs ">
-              <h5>{item.date}</h5>
-              <h5>{item.estimatedTimeToRead} Mins read</h5>
+        {visibleNew.map((item, i) => (
+          <FadeIn i={i}>
+            <div key={item.id} className="flex flex-col ">
+              <img className="rounded" src={item.image} alt="" />
+              <h5 className="text-xs my-2 bg-gray-200 w-fit font-semibold px-3  rounded   ring-1 ring-blue-700">
+                #{item.tag}
+              </h5>
+              <h2 className="font-semibold text-sm">{item.title}</h2>
+              <div className="flex justify-between text-xs ">
+                <h5>{item.date}</h5>
+                <h5>{item.estimatedTimeToRead} Mins read</h5>
+              </div>
             </div>
-          </div>
+          </FadeIn>
         ))}
       </div>
     </div>

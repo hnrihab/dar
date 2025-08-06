@@ -3,7 +3,7 @@ import { Layout } from '@/components/layout/Layout';
 import { HomePage } from '@/pages/HomePage';
 import { HouseDetailsPage } from '@/pages/HouseDetailsPage';
 import { LoginPage } from '@/pages/LoginPage';
-import Cartes from '@/pages/Cartes';
+import CartePage from '@/pages/Cartes';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
       { path: 'houses/:id', element: <HouseDetailsPage /> },
       { path: 'login', element: <LoginPage /> },
      
-       { path: 'cartes', element: <Cartes /> },
+       { path: 'carte', element: <CartePage /> },
       
     ],
   },

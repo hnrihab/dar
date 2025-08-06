@@ -1,101 +1,129 @@
 import { Link } from "react-router-dom";
-import watch from "../images/smallwatch.png";
-import pc from "../images/smallpc.png";
-import leftHero from "../images/lefthero.png";
-import { BsArrowRight } from "react-icons/bs";
 import "../index.css";
 import { useEffect, useState } from "react";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const Hero = () => {
-  const [number, setNumber] = useState(0);
-  const handleClick = () => {
-    number >= 2 ? setNumber(0) : setNumber((prev) => prev + 1);
-    console.log(number);
+  const [index, setIndex] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(true);
+  useEffect(() => {
+    if (!autoPlay) {
+      return;
+    }
+    const inter = setInterval(() => {
+      setIndex((prev) => (prev === 2 ? 0 : prev + 1));
+    }, 3000);
+
+    return () => clearInterval(inter);
+  }, [autoPlay]);
+  //handle next imag in the carousel
+  const handleNext = () => {
+    setIndex((prev) => (prev === 2 ? 0 : prev + 1));
+  };
+  const handleBack = () => {
+    setIndex((prev) => (prev === 0 ? 2 : prev - 1));
   };
 
-  useEffect(() => {
-    console.log(number);
-    const inter = setInterval(() => {
-      setNumber((prev) => {
-        const newNumber = prev >= 2 ? 0 : prev + 1;
-        return newNumber;
-      });
-    }, 4000);
-    return () => clearInterval(inter);
-  }, []);
-
-  const product = products[number];
-
   return (
-    <div className="lg:flex py-14 lg:justify-between lg:px-16 gap-6  my-10">
-      <div className="lg:w-[70%] border relative flex p-10 overflow-hidden  bg-[#d4f7ff] rounded">
-        <div className="flex flex-col  justify-between text-[#0e224c]">
-          <h5 className="text-xs font-thin">HOT RIGHT NOW</h5>
-          <h2 className="font-semibold text-2xl">Sale Up to 50% Off</h2>
-          <h1 className="font-bold transition-all text-4xl">{product.name}</h1>
-          <p className="w-[90%] text-sm my-10 ">{product.description}</p>
-          <div className="my-4 space-x-2">
+
+    <div className="lg:flex lg:justify-between lg:p-16 gap-6 border">
+      <div
+        className="lg:w-[70%] border relative flex  overflow-hidden  bg-[#d4f7ff] rounded cursor-pointer"
+        onMouseEnter={() => setAutoPlay(false)}
+        onMouseLeave={() => setAutoPlay(true)}
+      >
+        <div className="flex flex-col  justify-around py-16 px-16">
+          <h1 className="font-bold transition-all text-3xl z-20 lg:w-[70%]">
+            Votre Imprimerie en Ligne pour Tous Vos Besoins Publicitaires
+          </h1>
+          <p className=" lg:w-[50%] z-20 text-sm font-bold">
+            Votre partenaire d’impression pour tous vos supports de
+            communication. Commandez en ligne vos cartes de visite, flyers,
+            affiches, roll-ups, bâches vinyle et bien plus. Qualité
+            professionnelle, finitions sur mesure et livraison rapide partout au
+            Maroc.
+          </p>
+          <div className="mb-5 space-x-2 flex z-20">
             <Link
-              className="bg-[#fd9636] px-4 py-2 rounded text-sm text-white"
+              className="bg-black px-4 py-2 rounded text-sm text-white"
               to={"#"}
             >
-              Shop Now
+              Acheter
             </Link>
-            <Link className="text-sm underline" to={"#"}>
-              Learn More
+            <Link
+              className="text-sm  border-2 rounded border-black flex items-center px-3"
+              to={"#"}
+            >
+              En savoir plus
             </Link>
           </div>
         </div>
-        <img
-          src={leftHero}
-          className="w-80 lg:w-[28rem] object-cover translate-x-16 "
-          alt=""
-        />
-        <button
-          onClick={handleClick}
-          className="absolute right-2 bottom-2 bg-white"
-        >
-          <BsArrowRight />
-        </button>
+        <div className="flex absolute right-0  h-full w-full  ">
+          {imgs.map((item) => (
+            <img
+              key={item.imageid}
+              src={item.imgUrl}
+              style={{
+                transform: `translateX(-${index * 100}%)`,
+              }}
+              className="flex-shrink-0 object-cover w-full  right-0 -z-1 transition-all duration-700 cursor-pointer"
+              alt=""
+            />
+          ))}
+        </div>
+        <div className="absolute flex w-full justify-between h-full items-center">
+          <FaAngleLeft
+            onClick={handleBack}
+            size={24}
+            className="cursor-pointer"
+          />
+
+          <FaAngleRight
+            onClick={handleNext}
+            size={24}
+            className="cursor-pointer"
+          />
+        </div>
       </div>
-      <div className=" flex gap-2 justify-between  flex-col  my-5 lg:my-0  lg:mx-0 ">
-        <div className="bg-red-50 rounded overflow-hidden lg:gap-2 p-2 w-full relative lg:p-4 flex  justify-center border-[1px]">
-          <div className="flex flex-col items-start justify-around ">
-            <h5 className="text-xs ">
-              10% <span className="text-[##425a8b]">SALE OFF</span>
-            </h5>
-            <h2 className="font-semibold text-lg">Apple Watch Serial 7</h2>
-            <p className="text-sm">Don't miss the last opportunity.</p>
-            <Link
-              className="bg-[#425a8b] text-white text-xs px-4 py-2 rounded"
-              to={"#"}
-            >
-              Shop Now
+      <div className=" flex gap-6 justify-between  flex-col  my-5 lg:my-0  lg:mx-0 ">
+        <div className="bg-red-50 rounded overflow-hidden lg:gap-2  w-full relative py-4 lg:p-8 flex  justify-center border-[1px]">
+          <div className="flex flex-col gap-y-2 items-start justify-around z-20">
+            <h2 className=" text-2xl lg:w-[50%] font-bold">
+              Offer special Flayer
+            </h2>
+            <p className="text-sm font-semibold w-[70%]">
+              Des cartes professionnelle a prix reduit, <br />
+              avec finitions haut de gamme offrant cette semaine
+            </p>
+            <Link className="bg-white   text-xs px-4 py-2 rounded " to={"#"}>
+              Commander
             </Link>
           </div>
           <img
-            src={watch}
-            className=" w-40 right-0 translate-x-10 translate-y-10"
+            src="https://placehold.co/100x100"
+            className=" absolute top-0 left-0 w-full h-full object-cover "
             alt=""
           />
         </div>
-        <div className="bg-red-50 rounded overflow-hidden lg:gap-2 p-2 w-full relative lg:p-4 flex  justify-center border-[1px]">
-          <div className="flex flex-col items-start justify-around ">
-            <h5 className="text-xs ">
-              10% <span className="text-[##425a8b]">SALE OFF</span>
-            </h5>
-            <h2 className="font-semibold text-lg">Apple Watch Serial 7</h2>
-            <p className="text-sm">Don't miss the last opportunity.</p>
+        <div className="bg-red-50 rounded overflow-hidden lg:gap-5  w-full relative py-4 lg:p-8 flex  justify-center border-[1px]">
+          <div className="flex flex-col gap-y-2 items-start justify-around z-20">
+            <h2 className=" text-2xl lg:w-[50%] font-bold">
+              Cartes Visite Premium
+            </h2>
+            <p className="text-sm font-semibold w-[70%]">
+              Des cartes professionnelle a prix reduit, <br />
+              avec finitions haut de gamme offrant cette semaine
+            </p>
             <Link
-              className="bg-[#fd9636] text-white text-xs px-4 py-2 rounded "
+              className="bg-black text-white text-xs px-4 py-2 rounded "
               to={"#"}
             >
-              Shop Now
+              Commander
             </Link>
           </div>
           <img
-            src={pc}
-            className=" w-40 right-0 translate-x-10 translate-y-10"
+            src="https://placehold.co/100x100"
+            className=" absolute top-0 left-0 w-full h-full object-cover "
             alt=""
           />
         </div>
@@ -104,27 +132,18 @@ const Hero = () => {
   );
 };
 
-const products = [
+const imgs: { imageid: number; imgUrl: string }[] = [
   {
-    id: 1,
-    name: "Headphone",
-    // image: the image of the product,
-    description:
-      "Cutting-edge gadgets, devices, and tech accessories, from smartphones to smart home systems,  from smartphones to smart home systems.",
+    imageid: 1,
+    imgUrl: "https://placehold.co/300x300?text=image1",
   },
   {
-    id: 2,
-    name: "Clothing",
-    // image: the image of the product,
-    description:
-      "Stylish and comfortable apparel for all seasons, including eco-friendly and sustainable options.",
+    imageid: 2,
+    imgUrl: "https://placehold.co/300x300?text=image2",
   },
   {
-    id: 3,
-    name: "Home & Kitchen",
-    // image: the image of the product,
-    description:
-      "Everything to upgrade your living space, from cookware to cozy home decor essentials.",
+    imageid: 3,
+    imgUrl: "https://placehold.co/300x300?text=image3",
   },
 ];
 
