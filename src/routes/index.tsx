@@ -3,7 +3,7 @@ import { Layout } from '@/components/layout/Layout';
 import { HomePage } from '@/pages/HomePage';
 import { LoginPage } from '@/pages/LoginPage';
 import CartePage from '@/pages/Cartes';
-import PriceCalculator from '@/pages/PriceCalculator';
+import PriceCalculatorPage from '@/pages/Calcul';
 
 export const router = createBrowserRouter([
   {
@@ -15,7 +15,7 @@ export const router = createBrowserRouter([
       { path: 'login', element: <LoginPage /> },
      
        { path: 'carte', element: <CartePage /> },
-        { path: 'calcul', element: <PriceCalculator /> },
+        { path: 'calcul', element: <PriceCalculatorPage /> },
       
 
     ],
