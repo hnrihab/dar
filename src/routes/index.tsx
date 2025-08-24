@@ -4,6 +4,8 @@ import { HomePage } from '@/pages/HomePage';
 import { LoginPage } from '@/pages/LoginPage';
 import CartePage from '@/pages/Cartes';
 import PriceCalculatorPage from '@/pages/Calcul';
+import ProductPage from '@/pages/ProductPage';
+import ProductForm from '@/pages/ProductPage.tsx';
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +18,8 @@ export const router = createBrowserRouter([
      
        { path: 'carte', element: <CartePage /> },
         { path: 'calcul', element: <PriceCalculatorPage /> },
+         { path: 'produit', element: < ProductPage/> },
+         { path: 'add', element: < ProductForm/> },
       
 
     ],

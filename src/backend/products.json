@@ -1,0 +1,286 @@
+{
+  "categories": [
+    {
+      "id": "cartes",
+      "name": "Cartes",
+      "produits": [
+        {
+          "id": "carte_visite",
+          "name": "Carte de visite",
+          "options": {
+            "Taille(cm)": ["8,5x5,5", "8,5x5", "9x5,5", "9x5"],
+            "quantité": [100, 200, 300, 400, 500, 1000, 2000, 3000, 4000, 5000],
+            "papier": ["Couché 300 g/m²", "Couché 350 g/m²"],
+            "finition": ["Sans", "Mat", "Brillant"],
+            "impression": ["Recto", "Recto-verso"],
+            "extras": ["Coins arrondis"]
+          }
+        },
+        {
+          "id": "carte_remerciement",
+          "name": "Carte de remerciement",
+          "options": {
+            "Taille(cm)": ["10,5cm x 14,8cm (A6)", "14,8cm x 14,8cm", "10,5x7,4 (demi-A6)", "personnalisée"],
+            "quantité": [100, 200, 300, 400, 500, 1000],
+            "papier": ["Couché 300 g/m²", "Couché 350 g/m²"],
+            "plastification": ["Sans", "Mat", "Brillant"],
+            "impression": ["Recto", "Recto-verso"]
+          }
+        },
+        {
+          "id": "carte_invitation",
+          "name": "Carte d'invitation",
+          "options": {
+            "Taille(cm)": ["10,5cm x 14,8cm (A6)", "12cm x 17cm", "12cm x 12cm (carré)", "14,8cm x21cm (A5)", "personnalisée"],
+            "quantité": [100, 200, 300, 400, 500, 1000, 2000, 3000, 4000, 5000],
+            "papier": ["Couché 250 g/m²", "Couché 300 g/m²", "Couché 350 g/m²"],
+            "plastification": ["Sans", "Mat", "brillant"],
+            "impression": ["Recto", "Recto-verso"]
+          }
+        },
+        {
+          "id": "carte_voeux",
+          "name": "Carte de vœux",
+          "options": {
+            "Taille(cm)": ["10,5cm x 14,8cm (A6)", "14,8cm x 21cm (A5)", "14,8cm x 14,8cm (carré)", "12cm x 17cm", "personnalisée"],
+            "quantité": [100, 200, 300, 400, 500, 1000, 2000, 3000, 4000, 5000],
+            "papier": ["Couché 250 g/m²", "Couché 300 g/m²", "Couché 350 g/m²"],
+            "finition": ["Pelliculage mat", "Pelliculage mat", "Vernis sélectif", "Gaufrage", "Dorure"],
+            "impression": ["Recto", "Recto-verso"]
+          }
+        },
+        {
+          "id": "carte_fidelite",
+          "name": "Carte de fidélité",
+          "options": {
+            "Taille(cm)": ["8,56x5,4 (carte bancaire)", "8,5x5,5", "personnalisée"],
+            "quantité": [100, 200, 300, 400, 500, 1000, 2000, 3000, 4000, 5000],
+            "matériaux": ["PVC", "papier 250 g/m²", "papier 300 g/m²", "papier 350 g/m²"],
+            "plastification": ["Sans", "Mat", "brillant"],
+            "impression": ["Recto", "Recto-verso"],
+            "extras": ["Coins arrondis"]
+          }
+        },
+        {
+          "id": "carte_postale",
+          "name": "Carte postale",
+          "options": {
+            "Taille(cm)": ["10,5cm x 14,8cm (A6)", "10x15", "12cm x 17cm", "14,8cm x 14,8cm", "personnalisée"],
+            "quantité": [100, 250, 500, 1000, 2000, 3000, 4000, 5000],
+            "papier": ["papier 250g", " papier 300g", "Papier photo 350g"],
+            "finition": ["Pelliculage mat","Pelliculage brillant", "Vernis UV"],
+            "impression": ["Recto", "Recto-verso"],
+            "extras": ["Coins arrondis"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "flyers_depliants",
+      "name": "Flyers & Dépliants",
+      "produits": [
+        {
+          "id": "flyer",
+          "name": "Flyer",
+          "options": {
+            "Taille(cm)": ["10,5cm x 14,8cm (A6)", "14,8cm x 21cm (A5)", "21cm x 29,7cm (A4)"],
+            "quantité": [100, 250, 500, 1000, 2000, 3000, 4000, 5000],
+            "papier": ["Couché 135g","Couché 170g", "Couché 200g","Couché 250g"],
+            "finition": ["Sans", "Pelliculage mat", "Pelliculage brillant", "Vernis total UV", "Vernis sélectif"],
+            "impression": ["Recto", "Recto-verso"]
+          }
+        },
+        {
+          "id": "depliant_bifold",
+          "name": "Dépliant 2 volets (Bi-fold)",
+          "options": {
+            "Taille(cm)": ["14,8cm x 21cm (A5) plié", "21cm x 29,7cm (A4) plié", "29,7x42 (A3) plié"],
+            "quantité": [100, 250, 500, 1000, 2000, 3000, 4000, 5000],
+            "papier": ["Couché 135g/m²", "Couché 170g/m²", "Couché 300g/m²", "Couché 350g/m²"],
+            "finition": ["Sans", "Pelliculage mat", "Pelliculage brillant"],
+            "impression": ["Recto-verso"]
+          }
+        },
+        {
+          "id": "depliant_trifold",
+          "name": "Dépliant 3 volets (Tri-fold)",
+          "options": {
+            "Taille(cm)": ["21cm x 29,7cm (A4) plié en 3", "29,7x42 (A3) tri-fold", "DL tri-fold", "personnalisée"],
+            "quantité": [100, 250, 500, 1000, 2000, 3000, 4000, 5000],
+            "papier": ["Couché 135g/m²", "Couché 170g/m²", "Couché 300g/m²", "Couché 350g/m²"],
+            "finition": ["Sans", "Pelliculage mat", "Pelliculage brillant", "Vernis UV local"],
+            "impression": ["Recto-verso"]
+          }
+        },
+        {
+          "id": "depliant_accordeon",
+          "name": "Dépliant accordéon",
+          "options": {
+            "Taille(cm)": ["21cm x 29,7cm (A4) accordéon", "29,7x42 (A3) accordéon", "personnalisée"],
+            "quantité": [100, 250, 500, 1000, 2000, 3000, 4000, 5000],
+            "papier": ["Couché 135g/m²", "Couché 170g/m²", "Couché 300g/m²", "Couché 350g/m²"],
+            "finition": ["Sans", "Pelliculage mat", "Pelliculage brillant", "Vernis UV local"],
+            "impression": ["Recto-verso"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "livres_catalogues",
+      "name": "Livres & Catalogues",
+      "produits": [
+        {
+          "id": "brochure_agrafee",
+          "name": "Brochure agrafée (piqûre à cheval)",
+          "options": {
+            "Taille(cm)": ["21cm x 29,7cm (A4)", "14,8cm x 21cm (A5)", "14,8cm x 14,8cm", "personnalisée"],
+            "quantité": [100, 250, 500, 1000, 2000, 3000, 4000, 5000],
+            "nombre_de_pages": {"min": 12, "max": 80, "note":"multiple de 4 pour agrafage"},
+            "papier_intérieur": ["80g", "90g", "115g", "135g", "170g"],
+            "papier_couverture": ["200g", "250g", "300g", "350g"],
+            "finition": ["Pelliculage mat couverture", "Pelliculage brillant couverture", "Vernis sélectif"],
+            "impression": ["Recto", "Recto-verso"],
+            "reliure": ["Agrafage", "Spirale", "Dos carré-collé (si >48 pages)"]
+          }
+        },
+        {
+          "id": "magazine",
+          "name": "Magazine",
+          "options": {
+            "Taille(cm)": ["21cm x 29,7cm (A4)"],
+            "pages": [24, 36, 48, 72, "personnalisée"],
+            "papier_intérieur": ["80g", "90g", "115g", "135g", "170g"],
+            "couverture": ["250g mat", "250g brillant","300g mat","300g brillant","350g mat", "350g brillant"],
+            "reliure": ["Piqûre à cheval", "Reliure collée"]
+          }
+        },
+        {
+          "id": "book_hardpaper",
+          "name": "Livre",
+          "options": {
+            "Taille(cm)": ["14,8cm x 21cm (A5)", "21cm x 29,7cm (A4)","personnalisée"],
+            "pages": ["variable"],
+            "papier_intérieur": ["papier 80g", "papier 90g", "papier 115g", "papier 135g","papier 170g"],
+            "couverture": ["papier 250g","papier 300g","papier 350g"],
+            "reliure": ["Reliure collée", "piqûre à cheval", "Spirale"],
+            "finition_couverture": ["pelliculage mat","pelliculage brillant"]
+          }
+        },
+        {
+          "id": "catalogue_produit",
+          "name": "Catalogue produit",
+          "options": {
+            "Taille(cm)":["21cm x 29,7cm (A4)", "14,8cm x 21cm (A5)", "personnalisée"],
+            "pages": ["variable"],
+            "papier_intérieur": ["papier 80g", "papier 90g", "papier 115g", "papier 135g","papier 170g"],
+            "couverture": ["papier 250g","papier 300g","papier 350g"],
+            "finition": ["Pelliculage", "Vernis sélectif"],
+            "impression": ["Recto", "Recto-verso"]
+          }
+        },
+        {
+          "id": "rapport_annuel",
+          "name": "Rapport annuel",
+          "options": {
+            "Taille(cm)": ["21cm x 29,7cm (A4)"],
+            "quantité": [100, 250, 500, 1000, 2000, 3000, 4000, 5000],
+            "papier_intérieur": ["115g","135g", "170g"],
+            "couverture": ["300g", "350g"],
+            "reliure": ["Spirale", "Reliure collée"],
+            "finition": ["Dorure", "Vernis sélectif", "Gaufrage"]
+          }
+        },
+        {
+          "id": "menu_resto",
+          "name": "Menu restaurant relié",
+          "options": {
+            "Taille(cm)": ["14,8cm x 21cm (A5)", "14,8cm x 21cm (A5) plié", "21cm x 29,7cm (A4)","21cm x 29,7cm (A4) plié", "29,7cm x 42cm (A3)","29,7cm x 42cm (A3) plié"],
+            "papier": ["Couché 250 g/m²", "Couché 300 g/m²", "Couché 350 g/m²"],
+            "reliure": ["Spirale", "Collé", "Anneau"],
+            "finition": ["Plastification mate","Plastification brillante", "Plastification rigide"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "affiches_posters",
+      "name": "Affiches & Posters",
+      "produits": [
+        {
+          "id": "poster_standard",
+          "name": "Poster / Affiche",
+          "options": {
+            "Taille(cm)": ["29,7cm x 42cm (A3)", "42cm × 59,4cm (A2)", "59,4cm × 84,1cm (A1)", "84,1cm × 118,9cm (A0)", "grand format personnalisé"],
+            "quantité": [1, 5, 10, 25, 50, 100],
+            "matériaux": ["Papier 170g", "Papier 200-250g", "Papier photo 200g", "Polyester extérieur"],
+            "finition": ["Mat", "Brillant", "Satiné", "Lamination anti-UV"],
+            "impression": ["Bache", "Vinyle"],
+            "extras": ["Œillets", "Ourlets", "Montage sur foamboard", "Encadrement"]
+          }
+        },
+        {
+          "id": "poster_promotional",
+          "name": "Poster promotionnel / événementiel",
+          "options": {
+            "matériaux": ["Bâche PVC 440-510g", "Vinyle extérieur", "Toile textile"],
+            "finition": ["Renforcements", "Œillets", "Ourlets"],
+            "extras": ["Fixation", "Rails aluminium"]
+          }
+        },
+        {
+          "id": "poster_plastifie",
+          "name": "Affiche plastifiée",
+          "options": {
+            "laminage": ["80 microns", "125 microns"],
+            "finition": ["Mat", "Brillant", "Anti-reflet"]
+          }
+        },
+        {
+          "id": "panneau_rigide",
+          "name": "Panneaux rigides (Forex / Dibond / PVC)",
+          "options": {
+            "matériaux": ["Forex 3cm", "Forex 5cm", "Dibond 3cm", "PVC 5-10cm"],
+            "finition": ["Perçage", "Bords usinés", "Adhésif"],
+            "extras": ["Fixation murale", "Entretoises", "Lettrage 3D"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "papeterie_bureau",
+      "name": "Papeterie & Bureau",
+      "produits": [
+        {
+          "id": "papier_entete",
+          "name": "Papier à en-tête",
+          "options": {
+            "Taille(cm)": ["21cm x 29,7cm (A4)", "14,8cm x 21cm (A5)"],
+            "quantité": [250, 500, 1000, 2000, 3000, 4000, 5000],
+            "matériaux": ["papier 80g", "papier 90g", "papier 115g"],
+            "impression": ["Recto", "Recto-verso"]
+          }
+        },
+        {
+          "id": "bloc_notes",
+          "name": "Bloc-notes / Carnets",
+          "options": {
+            "formats": ["21cm x 29,7cm (A4)", "14,8cm x 21cm (A5)", "10,5cm x 14,8cm (A6)", "personnalisé"],
+            "papier_intérieur": ["papier 80g", "papier 90g", "papier 115g"],
+            "couverture": ["papier 250g","papier 300g", "papier 350g"],
+            "reliure": ["Spirale", "Collé", "Agrafé"],
+            "extras": ["Perforation", "Couverture pelliculée", "Marque-page"]
+          }
+        },
+        {
+          "id": "chemise_rabat",
+          "name": "Chemises à rabat",
+          "options": {
+            "tailles": ["22cm x 30,5cm (A4+) avec rabat"],
+            "matériaux": ["papier 300g", "papier 350g"],
+            "finition": ["Pelliculage mat", "Pelliculage brillant", "Vernis", "Dorure"]
+            }
+        }
+      ]
+    }
+  ]
+}
