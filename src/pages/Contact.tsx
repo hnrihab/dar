@@ -1,6 +1,7 @@
 import LeftNav from "@/components/layout/LeftNav";
 import Hero from "./Hero";
 import FadeIn from "@/components/motion/FadeIn";
+import MapCard from "./Map";
 
 const Contact = () => {
   return (
@@ -83,6 +84,10 @@ const Contact = () => {
             </div>
           </FadeIn>
         </div>
+      </div>
+
+      <div className=" mb-16   overflow-hidden flex justify-center items-center">
+        <MapCard />
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ export function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="container max-w-lg mx-auto px-4 py-16">
+    <div className="container max-w-lg mx-auto px-4 py-16 pt-32">
       <Card>
         <CardHeader className="space-y-1">
           <CardTitle className="text-2xl font-bold">Connexion</CardTitle>
