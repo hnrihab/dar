@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    font-family: 'NeueMontreal-Light';
+    src: url('../fonts/NeueMontreal-Light.otf') ;
+    font-weight: 100 ;
+    font-style: normal;
+  
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);

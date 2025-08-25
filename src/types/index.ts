@@ -30,3 +30,10 @@ export type item = {
   oldPrice: number;
   moreDetails: string[];
 };
+
+
+export type Products = {
+  id: string;
+  name: string;
+  options: Record<string, (string | number)[]>;
+};

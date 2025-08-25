@@ -20,6 +20,7 @@ export function HomePage() {
         <Articals />
         <LatestNew />
         <Services />
+        
       </div>
     </>
   );
