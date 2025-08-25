@@ -70,10 +70,8 @@ const Carte = () => {
   return (
     <div className="space-y-4 my-4 px-4">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {Products.map((item, i) => (
-          
-            <ProductCard data={item} />
-          
+        {Products.map((item) => (
+          <ProductCard data={item} />
         ))}
       </div>
     </div>

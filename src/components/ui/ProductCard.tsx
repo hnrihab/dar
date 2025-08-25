@@ -12,7 +12,6 @@ const ProductCard: React.FC<ProductsCardPrpos> = ({ data }) => {
     <div className="p-2 border rounded flex flex-col h-full">
       <div className="flex justify-between ">
         <div className=" w-full ">
-          
           <img
             className="rounded w-full "
             src="https://placehold.co/170x150"
@@ -35,7 +34,7 @@ const ProductCard: React.FC<ProductsCardPrpos> = ({ data }) => {
             </span>
           </div>
           <div className="flex text-xs items-center">
-            <FaStar color="yellow" />
+            <FaStar color="blue" />
             <FaStar color="yellow" />
             <FaStar color="yellow" />
             <FaStar color="yellow" />

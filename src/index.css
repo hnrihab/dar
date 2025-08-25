@@ -33,24 +33,6 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -108,14 +90,11 @@ h1 {
 }
 
 select,
-input {
+input:not([type="checkbox"]) {
   all: unset;
 }
 
 @layer base {
-  /* * {
-    @apply border-border;
-  } */
   body {
     @apply bg-background text-foreground;
   }

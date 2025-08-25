@@ -18,7 +18,7 @@ import { Link } from "react-router-dom";
 
 const LeftNav = () => {
   return (
-    <div className="w-fit border  ">
+    <div className="w-fit border z-30 py-16 fixed bg-white">
       <div className="mb-3 flex items-center justify-center  ">
         <PiCirclesFourBold size={24} />
       </div>
@@ -41,7 +41,7 @@ const LeftNav = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-col justify-around items-center gap-6 pt-10 mt-20 border-t  ">
+      <div className="flex flex-col justify-around items-center gap-6 pt-10  border-t  ">
         <FaFacebook />
         <FaLinkedin />
         <FaInstagram />

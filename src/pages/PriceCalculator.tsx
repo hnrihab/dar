@@ -45,7 +45,11 @@ const PriceCalculator = () => {
       {/* Image ou Placeholder */}
       <div className="flex-1 flex items-center justify-center bg-gray-100 h-64 rounded">
         {product.image ? (
-          <img src={product.image} alt={product.name} className="h-full object-contain" />
+          <img
+            src={product.image}
+            alt={product.name}
+            className="h-full object-contain"
+          />
         ) : (
           <span className="text-gray-400">Aperçu du produit</span>
         )}
@@ -54,7 +58,9 @@ const PriceCalculator = () => {
       {/* Détails produit et calcul */}
       <div className="flex-1">
         <h2 className="text-2xl font-bold mb-4">{product.name}</h2>
-        <p className="mb-4 text-gray-600">Prix de base : {product.basePrice}€</p>
+        <p className="mb-4 text-gray-600">
+          Prix de base : {product.basePrice}€
+        </p>
 
         <div className="space-y-3">
           {product.options.map((option) => (
@@ -73,9 +79,7 @@ const PriceCalculator = () => {
           ))}
         </div>
 
-        <div className="mt-6 text-xl font-semibold">
-          Total : {totalPrice}€
-        </div>
+        <div className="mt-6 text-xl font-semibold">Total : {totalPrice}€</div>
       </div>
     </div>
   );

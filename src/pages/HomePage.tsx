@@ -10,7 +10,7 @@ import LeftNav from "@/components/layout/LeftNav";
 export function HomePage() {
   return (
     <>
-      <div className="flex border ">
+      <div className="flex  ">
         <LeftNav />
         <Hero />
       </div>

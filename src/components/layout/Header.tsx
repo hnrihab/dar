@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -8,10 +7,8 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-
   return (
-
-    <header className="fixed top-0 left-0 right-0  z-50 bg-white/80 backdrop-blur-md lg:px-28 border">
+    <header className="fixed top-0 left-0 right-0  z-40 bg-white/80 backdrop-blur-md lg:px-16 border mx-12">
       <div className="     mx-auto">
         <div className="flex items-center justify-between h-16">
           {/* Logo + Barre de recherche */}
@@ -43,7 +40,6 @@ export function Header() {
                   </option>
                   <option value="Papeterie & Bureau">Papeterie & Bureau</option>
                 </select>
-
 
                 <input
                   type="text"
