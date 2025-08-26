@@ -59,7 +59,7 @@ export function Header() {
             <Link to="/produit" className="text-sm  hover:text-primary">
               Produit
             </Link>
-            <Link to="/about" className="text-sm  hover:text-primary">
+            <Link to="/contact" className="text-sm  hover:text-primary">
               Contact
             </Link>
           </nav>

@@ -7,6 +7,7 @@ import PriceCalculator from "@/pages/PriceCalculator";
 import PriceCalc from "@/pages/PriceCalc";
 import AllProducts from "@/components/allProducts/AllProducts";
 import Contact from "@/pages/Contact";
+import ProductPage from "@/pages/ProductPage";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,8 @@ export const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       //{ path: 'search', element: <SearchPage /> },
       { path: "login", element: <LoginPage /> },
+      { path: "produit", element: <ProductPage /> },
+
 
       { path: "carte", element: <CartePage /> },
       { path: "calcul", element: <PriceCalculator /> },
