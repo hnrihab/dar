@@ -1,98 +1,112 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Eye, EyeOff } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import { Checkbox } from '@/components/ui/checkbox';
+import { useState } from "react";
+import LeftNav from "@/components/layout/LeftNav";
+import FadeIn from "@/components/motion/FadeIn";
 
 export function RegisterPage() {
-  const [showPassword, setShowPassword] = useState(false);
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleRegister = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("http://localhost:8000/register.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, email, password }),
+      });
+      const data = await res.json();
+      setMessage(data.success ? "Inscription réussie !" : data.message || data.error);
+    } catch (err) {
+      setMessage("Erreur lors de l'inscription");
+    }
+  };
 
   return (
-    <div className="container max-w-lg mx-auto px-4 py-16">
-      <Card>
-        <CardHeader className="space-y-1">
-          <CardTitle className="text-2xl font-bold">Créer un compte</CardTitle>
-          <CardDescription>
-            Inscrivez-vous pour accéder à toutes nos fonctionnalités
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="firstName">Prénom</Label>
-              <Input id="firstName" required />
+    <>
+      {/* Navigation latérale */}
+      <div className="flex">
+        <LeftNav />
+      </div>
+
+      {/* Bloc principal arrondi */}
+      <div className="m-20 p-10 bg-gray-100 rounded-3xl shadow-xl flex overflow-hidden">
+        
+        {/* Colonne gauche - texte */}
+        <div className="flex-1 flex flex-col justify-center pr-10">
+          <FadeIn i={1}>
+            <h1 className="text-6xl text-dblue font-bold leading-tight">
+              Rejoignez Violet Vision dès aujourd'hui !
+            </h1>
+            <p className="mt-6 text-2xl text-gray-700">
+              Créez votre compte en quelques secondes et débloquez toutes nos fonctionnalités.
+            </p>
+            <div className="mt-10 space-y-3">
+              <p className="text-lg text-gray-600">
+                <span className="font-bold text-dviolet">Assistance :</span> support@violetvision.ma
+              </p>
+              <p className="text-lg text-gray-600">
+                <span className="font-bold text-dviolet">Téléphone :</span> +212 (0) 520 10 54 30
+              </p>
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="lastName">Nom</Label>
-              <Input id="lastName" required />
-            </div>
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
-            <Input
-              id="email"
-              type="email"
-              placeholder="exemple@email.com"
-              required
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="password">Mot de passe</Label>
-            <div className="relative">
-              <Input
-                id="password"
-                type={showPassword ? 'text' : 'password'}
-                required
-              />
-              <Button
-                type="button"
-                variant="ghost"
-                size="icon"
-                className="absolute right-0 top-0 h-full px-3 hover:bg-transparent"
-                onClick={() => setShowPassword(!showPassword)}
+          </FadeIn>
+        </div>
+
+        {/* Colonne droite - formulaire */}
+        <div className="flex-1 bg-violet-700 text-white rounded-3xl p-10">
+          <FadeIn i={2}>
+            <h2 className="text-5xl font-bold mb-6">Créer un compte</h2>
+            <p className="text-lg mb-8">
+              Remplissez les champs ci-dessous pour vous inscrire rapidement.
+            </p>
+
+            <form onSubmit={handleRegister} className="space-y-6">
+              <div className="border-b">
+                <input
+                  type="text"
+                  placeholder="Nom d'utilisateur"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  className="w-full bg-transparent border-none p-2 placeholder-gray-200 focus:outline-none text-white"
+                />
+              </div>
+              <div className="border-b">
+                <input
+                  type="email"
+                  placeholder="Adresse e-mail"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full bg-transparent border-none p-2 placeholder-gray-200 focus:outline-none text-white"
+                />
+              </div>
+              <div className="border-b">
+                <input
+                  type="password"
+                  placeholder="Mot de passe"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="w-full bg-transparent border-none p-2 placeholder-gray-200 focus:outline-none text-white"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="bg-white w-full rounded-2xl text-violet-700 font-bold py-2 transition hover:bg-gray-200"
               >
-                {showPassword ? (
-                  <EyeOff className="h-4 w-4 text-muted-foreground" />
-                ) : (
-                  <Eye className="h-4 w-4 text-muted-foreground" />
-                )}
-              </Button>
-            </div>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Checkbox id="terms" required />
-            <Label htmlFor="terms" className="text-sm">
-              J'accepte les{' '}
-              <Link to="/terms" className="text-primary hover:underline">
-                conditions d'utilisation
-              </Link>{' '}
-              et la{' '}
-              <Link to="/privacy" className="text-primary hover:underline">
-                politique de confidentialité
-              </Link>
-            </Label>
-          </div>
-        </CardContent>
-        <CardFooter className="flex flex-col space-y-4">
-          <Button className="w-full">S'inscrire</Button>
-          <span className="text-sm text-center text-muted-foreground">
-            Déjà un compte ?{' '}
-            <Link to="/login" className="text-primary hover:underline">
-              Se connecter
-            </Link>
-          </span>
-        </CardFooter>
-      </Card>
-    </div>
+                S'inscrire
+              </button>
+
+              {message && (
+                <p className="text-center text-sm mt-4 bg-white text-violet-700 rounded py-1">
+                  {message}
+                </p>
+              )}
+            </form>
+          </FadeIn>
+        </div>
+      </div>
+    </>
   );
 }
