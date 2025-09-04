@@ -33,7 +33,15 @@ export type item = {
 
 
 export type Products = {
+  image_url: string;
   id: string;
   name: string;
   options: Record<string, (string | number)[]>;
+  url_image?: string;
+  price: number;
+  description?: string;
+  category_id?: string;
+  
+
+
 };

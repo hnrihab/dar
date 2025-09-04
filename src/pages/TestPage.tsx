@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ProductCard from "@/components/ui/ProductCard.tsx";
+import ProductCard from "@/components/ui/pp";
 
 const TestPage: React.FC = () => {
   const [product, setProduct] = useState<any>(null);

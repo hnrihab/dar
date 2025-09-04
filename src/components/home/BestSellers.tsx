@@ -1,5 +1,5 @@
 import { item } from "@/types";
-import ProductCard from "../ui/ProductCard";
+import ProductCard from "../ui/pp";
 
 import FadeIn from "../motion/FadeIn";
 

@@ -1,7 +1,7 @@
 import BigCard from "@/components/ui/BigCard";
 import { useState } from "react";
 import { IoMdSearch } from "react-icons/io";
-import ProductCard from "../ui/ProductCard";
+import ProductCard from "../ui/pp";
 import { item } from "@/types";
 import FadeIn from "../motion/FadeIn";
 
